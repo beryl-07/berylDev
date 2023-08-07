@@ -258,21 +258,21 @@ export default function Home() {
                 <div className={styles.side1}>
                     <div ref={about} id="about" className={`${styles.theComposant} ${styles.theComposant1}`}>
                         <h1>ABOUT</h1>
-                        <p>I'm Béryl HOUESSOU, a mobile and backend developer (Laravel and NodeJS) currently finishing
-                            my degree in Computer and Software Systems (SIL). I'm passionate about web app development
-                            and with my growing interest in Android app development, I've decided to start <a className={styles.importante} href={"https://beryl.hashnode.dev/"}> a blog</a> to
+                        <p>I&apos;m Béryl HOUESSOU, a mobile and backend developer (Laravel and NodeJS) currently finishing
+                            my degree in Computer and Software Systems (SIL). I&apos;m passionate about web app development
+                            and with my growing interest in Android app development, I&apos;ve decided to start <a className={styles.importante} href={"https://beryl.hashnode.dev/"}> a blog</a> to
                             document my learning journey.</p>
-                        <p>These days, I'm concentrating mainly on my <a className={styles.importante}
-                                                                         href={"https://www.coursera.org/professional-certificates/meta-android-developer"}> "Meta
-                            Android Developer Professional Certificate". </a>
-                            So I can create or help to create the excellent Android product. And to diversify a bit, I'm
+                        <p>These days, I&apos;m concentrating mainly on my <a className={styles.importante}
+                                                                         href={"https://www.coursera.org/professional-certificates/meta-android-developer"}> &quot;Meta
+                            Android Developer Professional Certificate&quot;. </a>
+                            So I can create or help to create the excellent Android product. And to diversify a bit, I&apos;m
                             learning Rust with <a className={styles.importante}
                                                   href={"https://www.amazon.com/Rust-Web-Programming-hands-applications/dp/1803234695"}
-                            >"Rust Web Programming A hands-on guide to developing, packaging, and
-                                deploying fully functional Rust web applications" by Maxwell Flitton </a> and I love
+                            >&quot;Rust Web Programming A hands-on guide to developing, packaging, and
+                                deploying fully functional Rust web applications&quot; by Maxwell Flitton </a> and I love
                             low-level
                             code.</p>
-                        <p>In my spare time, I like to listen to music, watch videos on YouTube and, when I'm not in
+                        <p>In my spare time, I like to listen to music, watch videos on YouTube and, when I&apos;m not in
                             front of a screen, I like to play basketball or ride my bike. </p>
                     </div>
 
@@ -314,7 +314,7 @@ export default function Home() {
                                         </div>
                                         {internship.stacks && (
                                             <div className={styles.stackContainer}>
-                                                {internship.stacks.map((item) => <div
+                                                {internship.stacks.map((item, index) => <div key={index}
                                                     className={styles.stack}>{item}</div>)}
                                             </div>
                                         )}
@@ -377,7 +377,7 @@ export default function Home() {
                                         </div>
                                         {project.stacks && (
                                             <div className={styles.stackContainer}>
-                                                {project.stacks.map((item) => <div
+                                                {project.stacks.map((item, index) => <div key={index}
                                                     className={styles.stack}>{item}</div>)}
                                             </div>
                                         )}
