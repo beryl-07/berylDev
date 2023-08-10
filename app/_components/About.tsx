@@ -19,7 +19,7 @@ export default function About() {
               and I love low-level code.
             </p>
             <p className="mb-4">
-              In my spare time, I like to listen to music, watch videos on YouTube and, when I'm not in front of a screen, I like to play basketball or ride my bike.
+              In my spare time, I like to listen to music, watch videos on YouTube and, when I&#x27;m not in front of a screen, I like to play basketball or ride my bike.
             </p>
           </div>
         </section>
