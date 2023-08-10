@@ -4,7 +4,8 @@ import Image from 'next/image'
 import Header from './_components/Header'
 import About from './_components/About'
 import Experience from './_components/Experience'
-import { useState } from 'react';
+import { useState } from 'react'
+import Capture1 from './_assets/capture1.jpg'
 interface Work {
   name: string;
   url?: string;
@@ -103,7 +104,7 @@ export default function Home() {
                       </h3>
                       <p className="mt-2 text-sm leading-normal">It&#x27;s a web-based project management application for the SENIORDEV company, and also manages payroll calculations based on penalties and bonuses.</p>
                     </div>
-                    <Image alt="" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{ color: "transparent" }} src="/_assets/capture1.jpg" />
+                    <Image alt="" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{ color: "transparent" }} src={Capture1} />
                   </div>
                 </li>
               </ul>
