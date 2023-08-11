@@ -146,7 +146,7 @@ export default function Home() {
 
   return (
     <div onMouseMove={onMouseMove} className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 min-h-screen max-w-screen-xl mx-auto py-12 font-sans md:py-20 lg:px-24 lg:py-0 md:flex md:justify-end md:relative">
-      <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" style={{ background: `radial-gradient(600px at ${cursorPosition.left}px ${cursorPosition.top}px, rgba(29, 78, 216, 0.15), transparent 80%)` }}></div>
+      <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" style={{ background: `radial-gradient(600px at ${cursorPosition.left}px ${cursorPosition.top}px, rgba(29, 78, 216, 0.15), transparent 80%)`}}></div>
       <div className="lg:flex lg:justify-between lg:gap-4"></div>
 
       <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 md:min-h-screen">
