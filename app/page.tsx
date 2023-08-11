@@ -41,7 +41,6 @@ export default function Home() {
   const [cursorPosition, setCursorPosition] = useState({ top: 0, left: 0 })
   const onMouseMove = (e: React.MouseEvent) => {
     setCursorPosition({ top: e.screenY, left: e.screenX });
-    // console.log(`top: ${e.screenY}, left: ${e.screenX}`)
   }
   const internships: Work[] = [
     {
@@ -108,16 +107,11 @@ export default function Home() {
       if (isIntersectingAbout) {
         aboutMenu.current.querySelectorAll("#aboutMenu").forEach((el) => {
           el.classList.add(`active`);
-          console.log("+ isIntersectingAbout")
         });
-        console.log(`open: ${isIntersectingAbout}}`);
-
       } else {
         aboutMenu.current.querySelectorAll("#aboutMenu").forEach((el) => {
           el.classList.remove(`active`);
-          console.log("- isIntersectingAbout")
         });
-        console.log(`close: ${isIntersectingAbout}}`);
       }
     }
   }, [isIntersectingAbout]);
@@ -127,18 +121,11 @@ export default function Home() {
       if (isIntersectingProjects) {
         projectsMenu.current.querySelectorAll("#projectsMenu").forEach((el) => {
           el.classList.add(`active`);
-          console.log("+ isIntersectingProjects")
         });
-
-        console.log(`open: ${isIntersectingProjects}`);
-
       } else {
-        projectsMenu.current.querySelectorAll("#projectsMenu").forEach((el, index) => {
+        projectsMenu.current.querySelectorAll("#projectsMenu").forEach((el) => {
           el.classList.remove(`active`)
-          console.log("- isIntersectingProjects")
         });
-
-        console.log(`close: ${isIntersectingProjects}`);
       }
     }
   }, [isIntersectingProjects]);
@@ -146,19 +133,13 @@ export default function Home() {
   useEffect(() => {
     if (experienceMenu.current) {
       if (isIntersectingExperience) {
-        experienceMenu.current.querySelectorAll("#experienceMenu").forEach((el, index) => {
+        experienceMenu.current.querySelectorAll("#experienceMenu").forEach((el) => {
           el.classList.add(`active`)
-          console.log("+ isIntersectingExperience")
         });
-
-        console.log(`open: ${isIntersectingExperience}`)
       } else {
-        experienceMenu.current.querySelectorAll("#experienceMenu").forEach((el, index) => {
+        experienceMenu.current.querySelectorAll("#experienceMenu").forEach((el) => {
           el.classList.remove(`active`);
-          console.log("- isIntersectingExperience")
         });
-
-        console.log(`close: ${isIntersectingExperience}`)
       }
     }
   }, [isIntersectingExperience]);
