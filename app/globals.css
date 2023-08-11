@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.active > span:nth-child(1) {
+  @apply w-16 bg-slate-200
+}
+
+.active > span:nth-child(2) {
+  @apply text-slate-200
+}
