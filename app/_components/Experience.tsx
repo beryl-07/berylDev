@@ -31,7 +31,7 @@ export default function Experience({ work }: Props) {
                             </a>
                         </div>
                         <div>
-                            <div className="text-slate-500" aria-hidden="true">{work.name}</div>
+                            <div className="text-slate-500" aria-hidden="true">{work.location}</div>
                         </div>
                     </h3>
                     <p className="mt-2 text-sm leading-normal">
