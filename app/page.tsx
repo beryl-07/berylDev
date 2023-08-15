@@ -268,7 +268,7 @@ export default function Home() {
               ))}
             </ol>
             <div className="mt-12">
-              <a className="inline-flex items-center leading-tight text-slate-200 font-semibold group" aria-label="View Full Résumé" href="/resume.pdf">
+              <a className="inline-flex items-center leading-tight text-slate-200 font-semibold group" aria-label="View Full Résumé" href="https://1drv.ms/w/s!An6Of0ilaja5gZ4t4I3mTZQnrbhWRw?e=czP52h">
                 <span>
                   <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"> View Full </span>
                   <span className="whitespace-nowrap">
