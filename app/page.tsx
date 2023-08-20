@@ -28,14 +28,18 @@ export default function Home() {
   const [isIntersectingExperience, setIsIntersectingExperience] = useState(false);
   const [isIntersectingAbout, setIsIntersectingAbout] = useState(true);
   const [isIntersectingProjects, setIsIntersectingProjects] = useState(false);
+  const [isIntersectingCertifications, setIsIntersectingCertifications] = useState(false);
+
 
   const experience = useRef<HTMLDivElement>(null);
   const about = useRef<HTMLDivElement>(null);
   const projects = useRef<HTMLDivElement>(null);
+  const certifications = useRef<HTMLDivElement>(null);
 
   const experienceMenu = useRef<HTMLLIElement>(null);
   const aboutMenu = useRef<HTMLLIElement>(null);
   const projectsMenu = useRef<HTMLLIElement>(null);
+  const certificationsMenu = useRef<HTMLLIElement>(null);
 
 
   const [cursorPosition, setCursorPosition] = useState({ top: 0, left: 0 })
@@ -78,6 +82,9 @@ export default function Home() {
           case "projects":
             setIsIntersectingProjects(entry.isIntersecting);
             break;
+          case "certifications":
+            setIsIntersectingCertifications(entry.isIntersecting);
+            break;
         }
       },
       { threshold: 0.75 }
@@ -95,7 +102,11 @@ export default function Home() {
       observer.observe(projects.current);
     }
 
-    if (experience.current || about.current || projects.current) {
+    if (certifications.current) {
+      observer.observe(certifications.current);
+    }
+
+    if (experience.current || about.current || projects.current || certifications.current) {
       return () => {
         observer.disconnect();
       };
@@ -144,6 +155,20 @@ export default function Home() {
     }
   }, [isIntersectingExperience]);
 
+  useEffect(() => {
+    if (certificationsMenu.current) {
+      if (isIntersectingCertifications) {
+        certificationsMenu.current.querySelectorAll("#certificationsMenu").forEach((el) => {
+          el.classList.add(`active`)
+        });
+      } else {
+        certificationsMenu.current.querySelectorAll("#certificationsMenu").forEach((el) => {
+          el.classList.remove(`active`);
+        });
+      }
+    }
+  }, [isIntersectingCertifications]);
+
   return (
     <div onMouseMove={onMouseMove} className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 min-h-screen min-w-screen mx-auto py-12 font-sans md:py-20 lg:px-24 lg:py-0 md:flex md:justify-end md:relative">
       <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" style={{ background: `radial-gradient(600px at ${cursorPosition.left}px ${cursorPosition.top}px, rgba(29, 78, 216, 0.15), transparent 80%)` }}></div>
@@ -180,6 +205,15 @@ export default function Home() {
                   </span>
                 </a>
               </li>
+              <li ref={certificationsMenu}>
+                <a id={"certificationsMenu"} className="group flex items-center py-3 " href="#certifications">
+                  <span className="certificationsChild nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
+                  </span>
+                  <span className="certificationsChild nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                    Certifications
+                  </span>
+                </a>
+              </li>
               <li ref={projectsMenu}>
                 <a id={"projectsMenu"} className="group flex items-center py-3 " href="#projects">
                   <span className="projectsChild nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
@@ -189,6 +223,7 @@ export default function Home() {
                   </span>
                 </a>
               </li>
+              
             </ul>
           </nav>
         </div>
@@ -280,6 +315,33 @@ export default function Home() {
         <section ref={projects} id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
           <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
+          </div>
+          <div>
+            <ul className="group/list">
+              <li className="mb-12">
+                <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                  <div className="z-10 sm:order-2 sm:col-span-6">
+                    <h3>
+                      <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href="https://github.com/beryl452/hrSoftwareSystem" target="_blank" rel="noreferrer" aria-label="Build a HRSoftware System">
+                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                        <span>Build a Human Ressource Software <span className="inline-block"> App Web
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path></svg>
+                        </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p className="mt-2 text-sm leading-normal">It&#x27;s a web-based project management application for the SENIORDEV company, and also manages payroll calculations based on penalties and bonuses.</p>
+                  </div>
+                  <Image alt="" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{ color: "transparent" }} src={Capture1} />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section ref={certifications} id="certifications" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
+          <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Certifications</h2>
           </div>
           <div>
             <ul className="group/list">
