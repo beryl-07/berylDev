@@ -146,7 +146,7 @@ export default function Home() {
 
   return (
     <div onMouseMove={onMouseMove} className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 min-h-screen min-w-screen mx-auto py-12 font-sans md:py-20 lg:px-24 lg:py-0 md:flex md:justify-end md:relative">
-      <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" style={{ background: `radial-gradient(600px at ${cursorPosition.left}px ${cursorPosition.top}px, rgba(29, 78, 216, 0.15), transparent 80%)`}}></div>
+      <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" style={{ background: `radial-gradient(600px at ${cursorPosition.left}px ${cursorPosition.top}px, rgba(29, 78, 216, 0.15), transparent 80%)` }}></div>
       <div className="lg:flex lg:justify-between lg:gap-4"></div>
 
       <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 md:min-h-screen">
@@ -155,7 +155,7 @@ export default function Home() {
             <a href="/">Béryl HOUESSOU</a>
           </h1>
           <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-            Junior developer
+            Software developer
           </h2>
           <p className="mt-4 max-w-xs leading-normal">
             I am backend developer (Laravel, NodeJS) and apprentice android developer.
@@ -239,11 +239,8 @@ export default function Home() {
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About</h2>
           </div>
           <div>
-            <p className="mb-4">
-              I&#x27;m Béryl HOUESSOU, a mobile and backend developer (Laravel and NodeJS) currently finishing my degree in Computer and Software Systems (SIL). I&#x27;m passionate about web app development and with my growing interest in Android app development, I&#x27;ve decided to start
-              <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://beryl.hashnode.dev/" target="_blank" rel="noreferrer"> a blog </a>
-              to document my learning journey.
-              advertising agency
+            <p className="mb-4">            
+              I&#x27;m Béryl HOUESSOU, a mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer with a preference for the back-end. With a degree in computer systems and software, I&#x27;m passionate about web application development and with my growing interest in Android application development, I decided to start <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://beryl.hashnode.dev/" target="_blank" rel="noreferrer"> a blog </a> to document my learning journey.
             </p>
             <p className="mb-4">
               These days, I&#x27;m concentrating mainly on my
