@@ -158,7 +158,7 @@ export default function Home() {
             Software developer
           </h2>
           <p className="mt-4 max-w-xs leading-normal">
-            I am backend developer (Laravel, NodeJS) and apprentice android developer.
+          I&#x27;m mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer
           </p>
           <nav className="nav hidden lg:block" aria-label="In-page jump links">
             <ul className="mt-16 w-max">
