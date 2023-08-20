@@ -269,7 +269,7 @@ export default function Home() {
             </a>
           </li>
           <li className="mr-5 text-xs">
-            <a className="block hover:text-slate-200" href="https://www.linkedin.com/in/b%C3%A9ryl-houessou-03a016206/" target="_blank" rel="noreferrer">
+            <a className="block hover:text-slate-200" href="https://www.linkedin.com/in/berylhouessou/" target="_blank" rel="noreferrer">
               <span className="sr-only">LinkedIn</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
