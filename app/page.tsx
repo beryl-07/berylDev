@@ -1,10 +1,12 @@
 "use client";
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import About from './_components/About'
 import Experience from './_components/Experience'
 import { useRef, useState, useEffect, useMemo } from "react"
 import Capture1 from './_assets/capture1.jpg'
+import Certification1 from './_assets/Coursera J2E8P9MHTJ34.jpg'
+import Certification2 from './_assets/Coursera S4GNHJN4ANTF.jpg'
 interface Work {
   name: string;
   url?: string;
@@ -13,6 +15,12 @@ interface Work {
   date: string;
   description: string;
   stacks?: string[];
+}
+
+interface Certificate {
+  name: string;
+  url: string;
+  image: StaticImageData;
 }
 
 interface Project {
@@ -66,6 +74,18 @@ export default function Home() {
       description:
         "During my placement, I developed my back-end development skills with Laravel and improved my front-end development skills with VueJS 2 by creating a web application for managing practical work.",
       stacks: ["VueJS", "Laravel", "JavaScript", "PHP", "MERISE", "MySQL"],
+    },
+  ];
+  const myCertifications: Certificate[] = [
+    {
+      name: "Introduction to Android Mobile Application Development",
+      url: "https://www.coursera.org/account/accomplishments/verify/J2E8P9MHTJ34",
+      image: Certification1,
+    },
+    {
+      name: "Programming Fundamentals in Kotlin",
+      url: "https://www.coursera.org/account/accomplishments/verify/S4GNHJN4ANTF",
+      image: Certification2
     },
   ];
 
@@ -183,7 +203,7 @@ export default function Home() {
             Software developer
           </h2>
           <p className="mt-4 max-w-xs leading-normal">
-          I&#x27;m mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer
+            I&#x27;m mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer
           </p>
           <nav className="nav hidden lg:block" aria-label="In-page jump links">
             <ul className="mt-16 w-max">
@@ -205,15 +225,6 @@ export default function Home() {
                   </span>
                 </a>
               </li>
-              <li ref={certificationsMenu}>
-                <a id={"certificationsMenu"} className="group flex items-center py-3 " href="#certifications">
-                  <span className="certificationsChild nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
-                  </span>
-                  <span className="certificationsChild nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
-                    Certifications
-                  </span>
-                </a>
-              </li>
               <li ref={projectsMenu}>
                 <a id={"projectsMenu"} className="group flex items-center py-3 " href="#projects">
                   <span className="projectsChild nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
@@ -223,7 +234,15 @@ export default function Home() {
                   </span>
                 </a>
               </li>
-              
+              <li ref={certificationsMenu}>
+                <a id={"certificationsMenu"} className="group flex items-center py-3 " href="#certifications">
+                  <span className="certificationsChild nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
+                  </span>
+                  <span className="certificationsChild nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                    Certifications
+                  </span>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -274,7 +293,7 @@ export default function Home() {
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About</h2>
           </div>
           <div>
-            <p className="mb-4">            
+            <p className="mb-4">
               I&#x27;m Béryl HOUESSOU, a mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer with a preference for the back-end. With a degree in computer systems and software, I&#x27;m passionate about web application development and with my growing interest in Android application development, I decided to start <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://beryl.hashnode.dev/" target="_blank" rel="noreferrer"> a blog </a> to document my learning journey.
             </p>
             <p className="mb-4">
@@ -345,24 +364,29 @@ export default function Home() {
           </div>
           <div>
             <ul className="group/list">
-              <li className="mb-12">
-                <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                  <div className="z-10 sm:order-2 sm:col-span-6">
-                    <h3>
-                      <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href="https://github.com/beryl452/hrSoftwareSystem" target="_blank" rel="noreferrer" aria-label="Build a HRSoftware System">
-                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                        <span>Build a Human Ressource Software <span className="inline-block"> App Web
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path></svg>
-                        </span>
-                        </span>
-                      </a>
-                    </h3>
-                    <p className="mt-2 text-sm leading-normal">It&#x27;s a web-based project management application for the SENIORDEV company, and also manages payroll calculations based on penalties and bonuses.</p>
-                  </div>
-                  <Image alt="" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{ color: "transparent" }} src={Capture1} />
-                </div>
-              </li>
+              {
+                myCertifications.map((certification: Certificate, index: any) => (
+                  <li className="mb-12" key={index}>
+                    <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                      <div className="z-10 sm:order-2 sm:col-span-6 flex items-center">
+                        <h3>
+                          <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href={certification.url} target="_blank" rel="noreferrer" aria-label="Build a HRSoftware System">
+                            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                            <span>  <span className="inline-block"> {certification.name}
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path></svg>
+                            </span>
+                            </span>
+                          </a>
+                        </h3>
+                      </div>
+                      <Image alt="" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{ color: "transparent" }} src={certification.image} />
+                    </div>
+                  </li>
+                ))
+              }
+
+
             </ul>
           </div>
         </section>
