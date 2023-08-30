@@ -7,6 +7,8 @@ import { useRef, useState, useEffect, useMemo } from "react"
 import Capture1 from './_assets/capture1.jpg'
 import Certification1 from './_assets/Coursera J2E8P9MHTJ34.jpg'
 import Certification2 from './_assets/Coursera S4GNHJN4ANTF.jpg'
+import Certification3 from './_assets/Coursera N2J4BBHEB4ZS.jpg'
+
 interface Work {
   name: string;
   url?: string;
@@ -87,6 +89,11 @@ export default function Home() {
       url: "https://www.coursera.org/account/accomplishments/verify/S4GNHJN4ANTF",
       image: Certification2
     },
+    {
+      name: "React Basics",
+      url: "https://www.coursera.org/account/accomplishments/verify/N2J4BBHEB4ZS",
+      image: Certification3
+    }
   ];
 
   useEffect(() => {
