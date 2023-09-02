@@ -20,11 +20,10 @@ export default function RootLayout({
       <Head>
         <meta
           name="description"
-          content="
-            
-Béryl HOUESSOU
-Software developer
-I'm mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer
+          content="    
+        Béryl HOUESSOU
+        Software developer
+        I'm mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer
           "
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,7 +32,7 @@ I'm mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer
       <body
         className={
           // inter.className + 
-          "bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900"}
+          "bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 lg:bg-white"}
       >
         {children}
       </body>

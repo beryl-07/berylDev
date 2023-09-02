@@ -5,6 +5,7 @@ import About from './_components/About'
 import Experience from './_components/Experience'
 import { useRef, useState, useEffect, useMemo } from "react"
 import Capture1 from './_assets/capture1.jpg'
+import ComingSoon from './_assets/comingSoon.gif'
 import Certification1 from './_assets/Coursera J2E8P9MHTJ34.jpg'
 import Certification2 from './_assets/Coursera S4GNHJN4ANTF.jpg'
 import Certification3 from './_assets/Coursera N2J4BBHEB4ZS.jpg'
@@ -28,7 +29,8 @@ interface Certificate {
 interface Project {
   name: string;
   url: string;
-  location: string;
+  image: StaticImageData;
+  // location: string;
   description: string;
   stacks?: string[];
 }
@@ -96,6 +98,20 @@ export default function Home() {
     }
   ];
 
+  const myProjects: Project[] = [
+    {
+      name: "Bookr",
+      url: "",
+      image: ComingSoon,
+      description: "Bookr is an application for adding, viewing and managing book reviews."
+    },
+    {
+      name: "Human Ressource Software",
+      url: "https://github.com/beryl452/hrSoftwareSystem",
+      image: Capture1,
+      description: " It's a web-based project management application for the SENIORDEV company, and also manages payroll calculations based on penalties and bonuses."
+    }
+  ]
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -197,7 +213,7 @@ export default function Home() {
   }, [isIntersectingCertifications]);
 
   return (
-   
+
     <div onMouseMove={onMouseMove} className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 min-h-screen min-w-screen mx-auto py-12 font-sans md:py-20 lg:px-24 lg:py-0 md:flex md:justify-end md:relative">
       <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" style={{ background: `radial-gradient(600px at ${cursorPosition.left}px ${cursorPosition.top}px, rgba(29, 78, 216, 0.15), transparent 80%)` }}></div>
       <div className="lg:flex lg:justify-between lg:gap-4"></div>
@@ -305,11 +321,12 @@ export default function Home() {
               I&#x27;m Béryl HOUESSOU, a mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer with a preference for the back-end. With a degree in computer systems and software, I&#x27;m passionate about web application development and with my growing interest in Android application development, I decided to start <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://beryl.hashnode.dev/" target="_blank" rel="noreferrer"> a blog </a> to document my learning journey.
             </p>
             <p className="mb-4">
-              These days, I&#x27;m concentrating mainly on my
+              {/* These days, I&#x27;m concentrating mainly on my
               <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.coursera.org/professional-certificates/meta-android-developer" target="_blank" rel="noreferrer"> &#x22;Meta Android Developer Professional Certificate&#x22;. </a>
               So I can create or help to create the excellent Android product. And to diversify a bit, I&#x27;m learning Rust with
               <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.amazon.com/Rust-Web-Programming-hands-applications/dp/1803234695" target="_blank" rel="noreferrer"> &#x22;Rust Web Programming A hands-on guide to developing, packaging, and deploying fully functional Rust web applications&#x22; by Maxwell Flitton </a>
-              and I love low-level code.
+              and I love low-level code. */}
+              These days, through the book <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.packtpub.com/product/web-development-with-django-second-edition/9781803230603" target="_blank" rel="noreferrer"> &#x22;Web Development with Django&#x22; </a> written by Ben Shaw, Saurabh Badhwar, Chris Guest, Bharath Chandra K S, I&#x27;m discovering the Django framework by creating the Bookr application that lets you add, view and manage book reviews.
             </p>
             <p className="mb-4">
               In my spare time, I like to listen to music, watch videos on YouTube and, when I&#x27;m not in front of a screen, I like to play basketball or ride my bike.
@@ -345,24 +362,28 @@ export default function Home() {
           </div>
           <div>
             <ul className="group/list">
-              <li className="mb-12">
-                <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                  <div className="z-10 sm:order-2 sm:col-span-6">
-                    <h3>
-                      <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href="https://github.com/beryl452/hrSoftwareSystem" target="_blank" rel="noreferrer" aria-label="Build a HRSoftware System">
-                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                        <span>Build a Human Ressource Software <span className="inline-block"> App Web
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path></svg>
-                        </span>
-                        </span>
-                      </a>
-                    </h3>
-                    <p className="mt-2 text-sm leading-normal">It&#x27;s a web-based project management application for the SENIORDEV company, and also manages payroll calculations based on penalties and bonuses.</p>
-                  </div>
-                  <Image alt="" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{ color: "transparent" }} src={Capture1} />
-                </div>
-              </li>
+              {
+                myProjects.map((project: Project, index: any) => (
+                  <li className="mb-12" key={index}>
+                    <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                      <div className="z-10 sm:order-2 sm:col-span-6">
+                        <h3>
+                          <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href={project.url} target="_blank" rel="noreferrer" aria-label="Build a HRSoftware System">
+                            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                            <span> {project.name} <span className="inline-block">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path></svg>
+                            </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <p className="mt-2 text-sm leading-normal">{project.description}</p>
+                      </div>
+                      <Image alt="" loading="lazy" width="200" height="48" decoding="async" data-nimg="1" className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1" style={{ color: "transparent" }} src={project.image} />
+                    </div>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </section>
