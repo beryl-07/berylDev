@@ -1,9 +1,8 @@
 "use client";
 
+import React, { useRef, useState, useEffect } from "react"
 import Image, { StaticImageData } from 'next/image'
-import About from './_components/About'
 import Experience from './_components/Experience'
-import { useRef, useState, useEffect, useMemo } from "react"
 import Capture1 from './_assets/capture1.jpg'
 import ComingSoon from './_assets/comingSoon.gif'
 import Certification1 from './_assets/Coursera J2E8P9MHTJ34.jpg'
