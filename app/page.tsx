@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react"
 import Image, { StaticImageData } from 'next/image'
 import Experience from './_components/Experience'
 import Capture1 from './_assets/capture1.jpg'
+import Adpme from './_assets/adpme.png'
 import ComingSoon from './_assets/comingSoon.gif'
 import Certification1 from './_assets/Coursera J2E8P9MHTJ34.jpg'
 import Certification2 from './_assets/Coursera S4GNHJN4ANTF.jpg'
@@ -53,11 +54,20 @@ export default function Home() {
   const certificationsMenu = useRef<HTMLLIElement>(null);
 
 
-  const [cursorPosition, setCursorPosition] = useState({ top: 0, left: 0 })
+  const [cursorPosition, setCursorPosition] = useState({ top: -255, left: -255 })
   const onMouseMove = (e: React.MouseEvent) => {
     setCursorPosition({ top: e.screenY, left: e.screenX });
   }
   const internships: Work[] = [
+    {
+      name: "ADPME",
+      url: "https://adpme.bj/",
+      position: "Back-end Developer",
+      location: "Cotonou, Benin",
+      date: "November 2023 - Present",
+      description:`During my internship, I worked on the development of the ADPME website (Front-Office and Back-Office), mainly on the back-end using Node and Express JS with a code architecture inspired by the default NestJS applications. I've also improved my skills in using the Prisma ORM and DevOps tools like Docker and Docker Compose.`,
+      stacks: ["NodeJS", "ExpressJS", "TypeScript", "Prisma", "Docker", "Docker Compose", "PostgreSQL", "PM2"]
+    },
     {
       name: "SENIORDEV",
       url: "https://seniordev-group.com/",
@@ -103,6 +113,12 @@ export default function Home() {
       url: "",
       image: ComingSoon,
       description: "Bookr is an application for adding, viewing and managing book reviews."
+    },
+    {
+      name: "ADPME Website",
+      url: "https://adpme.bj/",
+      image: Adpme,
+      description: "It's a website for the Agency for the Promotion of Entrepreneurship in Benin. It's a platform for the management of the agency's activities and the management of the projects it supports."
     },
     {
       name: "Human Ressource Software",
@@ -343,7 +359,7 @@ export default function Home() {
               ))}
             </ol>
             <div className="mt-12">
-              <a className="inline-flex items-center leading-tight text-slate-200 font-semibold group" aria-label="View Full Résumé" target="_blank" href="./resume.pdf">
+              <a className="inline-flex items-center leading-tight text-slate-200 font-semibold group" aria-label="View Full Résumé" target="_blank" href="./Resume_Béryl_HOUESSOU.pdf">
                 <span>
                   <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"> View Full </span>
                   <span className="whitespace-nowrap">
