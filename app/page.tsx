@@ -109,10 +109,10 @@ export default function Home() {
 
   const myProjects: Project[] = [
     {
-      name: "Bookr",
-      url: "",
+      name: "AskVibe",
+      url: "https://github.com/beryl452/AskVibe",
       image: ComingSoon,
-      description: "Bookr is an application for adding, viewing and managing book reviews."
+      description: "AskVibe is an interactive event management platform designed to enhance event experiences by providing real-time Q&A sessions, voting mechanisms, and robust role-based access control."
     },
     {
       name: "ADPME Website",
@@ -242,7 +242,7 @@ export default function Home() {
             Software developer
           </h2>
           <p className="mt-4 max-w-xs leading-normal">
-            I&#x27;m mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer
+            My specialties? Listening attentively, clarifying the problem, and solving it.
           </p>
           <nav className="nav hidden lg:block" aria-label="In-page jump links">
             <ul className="mt-16 w-max">
@@ -333,18 +333,13 @@ export default function Home() {
           </div>
           <div>
             <p className="mb-4">
-              I&#x27;m Béryl HOUESSOU, a mobile (Android, Kotlin) and web (Laravel, NodeJS, ReactJS, VueJS) developer with a preference for the back-end. With a degree in computer systems and software, I&#x27;m passionate about web application development and with my growing interest in Android application development, I decided to start <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://beryl.hashnode.dev/" target="_blank" rel="noreferrer"> a blog </a> to document my learning journey.
+              An adaptable, detail-oriented software developer, I&#x27;m deeply interested in building functional, scalable software that improves quality of life. I currently work with <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"> Node.js [Adonis.js, Express.js, Nest.js], TypeScript, Python, and PostgreSQL</span>, leveraging these technologies to create robust backend solutions.
             </p>
             <p className="mb-4">
-              {/* These days, I&#x27;m concentrating mainly on my
-              <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.coursera.org/professional-certificates/meta-android-developer" target="_blank" rel="noreferrer"> &#x22;Meta Android Developer Professional Certificate&#x22;. </a>
-              So I can create or help to create the excellent Android product. And to diversify a bit, I&#x27;m learning Rust with
-              <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.amazon.com/Rust-Web-Programming-hands-applications/dp/1803234695" target="_blank" rel="noreferrer"> &#x22;Rust Web Programming A hands-on guide to developing, packaging, and deploying fully functional Rust web applications&#x22; by Maxwell Flitton </a>
-              and I love low-level code. */}
-              These days, through the book <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.packtpub.com/product/web-development-with-django-second-edition/9781803230603" target="_blank" rel="noreferrer"> &#x22;Web Development with Django&#x22; </a> written by Ben Shaw, Saurabh Badhwar, Chris Guest, Bharath Chandra K S, I&#x27;m discovering the Django framework by creating the Bookr application that lets you add, view and manage book reviews.
+              I&#x27;m currently finishing the <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">ALX program in the Backend specialty</span> by developing <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">AskVibe</span>, a platform to streamline event management with real-time features. My professional experience also includes proficiency in <span className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">Laravel, React.js, Docker and Github</span>, with a strong focus on efficient and collaborative development.
             </p>
             <p className="mb-4">
-              In my spare time, I like to listen to music, watch videos on YouTube and, when I&#x27;m not in front of a screen, I like to play basketball or ride my bike.
+            In my spare time, I like to listen to music, watch videos on YouTube and, when I&#x27;m not in front of a screen, I like to play basketball or ride my bike. I am continuously learning and striving to understand in depth the tools and technologies I use, ensuring that I can deliver high-quality, innovative solutions.
             </p>
           </div>
         </section>

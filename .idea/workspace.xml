@@ -67,6 +67,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -82,6 +89,8 @@
       <workItem from="1693992809198" duration="133000" />
       <workItem from="1698936873236" duration="570000" />
       <workItem from="1698939867239" duration="107000" />
+      <workItem from="1707469596226" duration="399000" />
+      <workItem from="1707613061971" duration="49000" />
     </task>
     <servers />
   </component>
