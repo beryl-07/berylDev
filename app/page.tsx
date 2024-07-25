@@ -91,9 +91,9 @@ export default function Home() {
   ];
   const myCertifications: Certificate[] = [
     {
-      name: "Introduction to Android Mobile Application Development",
-      url: "https://www.coursera.org/account/accomplishments/verify/J2E8P9MHTJ34",
-      image: Certification1,
+      name: "React Basics",
+      url: "https://www.coursera.org/account/accomplishments/verify/N2J4BBHEB4ZS",
+      image: Certification3
     },
     {
       name: "Programming Fundamentals in Kotlin",
@@ -101,10 +101,10 @@ export default function Home() {
       image: Certification2
     },
     {
-      name: "React Basics",
-      url: "https://www.coursera.org/account/accomplishments/verify/N2J4BBHEB4ZS",
-      image: Certification3
-    }
+      name: "Introduction to Android Mobile Application Development",
+      url: "https://www.coursera.org/account/accomplishments/verify/J2E8P9MHTJ34",
+      image: Certification1,
+    },
   ];
 
   const myProjects: Project[] = [
